@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/Avenir.ttc);
+}
+
+@font-face {
+    font-family: Avenir-Black;
+    src: url(../fonts/Avenir-Black.ttf);
+}
+
+@font-face {
+    font-family: GothamBold;
+    src: url(../fonts/GothamBold.ttf);
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(../fonts/GothamBook_0.ttf);
+}
+
+@font-face {
+    font-family: GothamMedium;
+    src: url(../fonts/GothamMedium.ttf);
+}
+
+@font-face {
+    font-family: MyriadPro-Regular;
+    src: url(../fonts/MyriadPro-Regular_5.otf);
+}

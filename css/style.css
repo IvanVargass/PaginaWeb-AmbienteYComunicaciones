@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/*------------------- Reseteo de estilos por defecto -------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: initial;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+body {
+  line-height: 20px;
+  font-weight: 300;
+  font-size: 15px;
+  background-color: #ffffff; }
+
+html {
+  background-color: #ffffff; 
+}
+
+/*-------------------Clases Globales -------------------*/
+.text-justify{ text-align: justify; }
+.sin-m{ margin: 0; }
+.sin-p{ padding: 0; }
+
+/*------------------- Variables globales -------------------*/
+:root{
+  --bg-gris-claro: #eaeaea;
+  --bg-azul-claro: #a5b6bd;
+  --bg-azul-intermedio-1: #006197;
+  --bg-azul-oscuro: #223658;
+  --color-gris-claro: #eaeaea;
+  --color-gris-intermedio: #8c8c8c;
+  --color-gris-oscuro: #737373;
+}
+
+/*------------------- Navbar -------------------*/
+.navbar .navbar-brand img { width: 150px; }
+.navbar .navbar-nav li > a { 
+    color: #fff;
+    font-size: 16px; 
+}
+.navbar .w-nav{ width: 70%; }
+.navbar .iconos > i { font-size: 18px; }
+.navbar .iconos > a {
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff
+}
+
+/*------------------- Nosotros -------------------*/
+.nosotros { 
+  background-color: var(--bg-gris-claro);
+  padding: 4em 0;
+}
+.nosotros h3, .nosotros .quienes-somos h2, .nosotros .quienes-somos p, .nosotros .quienes-somos button,
+.equipo h3, .equipo p, .servicios h3 {
+  color: var(--color-gris-oscuro);
+  font-family: Avenir;
+  line-height: 120%;
+}
+.nosotros h3, .nosotros .quienes-somos p, .equipo h3, .equipo p, .servicios h3 { font-size: 15px; }
+.nosotros h3, .nosotros .quienes-somos button, .equipo h3, .servicios h3 { letter-spacing: 4px; }
+.nosotros .separador, .equipo .separador, .servicios .separador {
+  height: 0.8px;
+  background-color: var(--color-gris-oscuro);
+}
+.nosotros .quienes-somos h2 {
+  font-family: Avenir-Black;
+  font-size: 120px;
+  line-height: 95px;
+  letter-spacing: -8px;
+}
+.nosotros .quienes-somos h2 span {
+  font-family: Avenir;
+  font-size: 28px;
+  letter-spacing: 28px;
+}
+.nosotros .quienes-somos .description{ padding-left: 15em; }
+.nosotros .quienes-somos button{
+  background-color: var(--color-gris-oscuro);
+  color: var(--color-gris-claro);
+  font-size: 13px;
+  padding: 3px 12px;
+  border-radius: 5px;
+}
+
+/*------------------- Equipo -------------------*/
+.equipo { padding: 4em; }
+.equipo img{ width: 45%; }
+.equipo p {
+  position: relative;
+  top: 80px;
+  left: -70px;
+}
+
+/*------------------- Alcance Global -------------------*/
+.alcance-global{
+  background-image: url('../img/Fondo_Mapa.png');
+  background-size: cover;
+  padding: 9em 0 11em 0;
+}
+.alcance-global h2 span, .nuestro-compromiso h2 span { 
+  font-size: 36px;
+  letter-spacing: 27px;
+}
+.alcance-global h2, .nuestro-compromiso h2{
+  font-size: 90px;
+  line-height: 60px;
+}
+
+/*------------------- Nuestro Compromiso -------------------*/
+.nuestro-compromiso{
+  padding: 5em 0 8em 0;
+  background-color: var(--bg-azul-claro);
+}
+.nuestro-compromiso img{ width: 95%; }
+.nuestro-compromiso p { padding-top: 35px; }
+.nuestro-compromiso .cont-compromisos{ padding: 40px 0 0 10px; }
+.nuestro-compromiso h2 { letter-spacing: -7px; }
+
+/*------------------- Experiencia -------------------*/
+.experiencia{
+  padding: 4em 0;
+  background-color: var(--bg-azul-oscuro);
+}
+.experiencia img { width: 80%; position: relative; left: 100px;}
+.experiencia h2 {
+  padding-top: 0.7em;
+  font-family: Avenir;
+  font-size: 130px;
+  line-height: 90%;
+}
+
+/*------------------- Servicios -------------------*/
+.servicios { padding: 3em 0 6em 0;}
+.servicios .produccion h2 {
+  padding-top: 0.8em;
+  font-family: Avenir;
+  color: var(--color-gris-intermedio);
+  font-size: 90px;
+  line-height: 70%;
+  letter-spacing: -2px;
+}
+.servicios .produccion h2 span { 
+  color: var(--color-gris-oscuro);
+  font-size: 60px;
+}
+
+.servicios .eventos{ padding-top: 3em;}
+.servicios .eventos h3 {
+  font-size: 38px;
+  line-height: 30%;
+  letter-spacing: -2px;
+}
+
+.servicios .eventos h3 span { font-size: 50px; }
+.servicios .eventos ul, .comunicacion-integral ul { 
+  list-style-image: url("../img/icono-eventos-2.png"); 
+  color: var(--color-gris-oscuro);
+}
+
+.servicios .eventos ul li, .comunicacion-integral ul li { 
+  padding-top: 0.6em; 
+  font-weight: bolder;
+}
+
+/*------------------- Comunicación Integral -------------------*/
+.comunicacion-integral { background-color: var(--bg-gris-claro); }
+
+.comunicacion-integral h2{
+  font-family: Avenir;
+  color: var(--color-gris-intermedio);
+  font-size: 80px;
+  line-height: 50%;
+  letter-spacing: -5px;
+  padding-top: 2em;
+}
+
+.comunicacion-integral h2 span { 
+  color: var(--color-gris-oscuro);
+  font-size: 70px;
+}
+
+.comunicacion-integral img{
+  width: 80%;
+}
+
+/*------------------- Asesoría -------------------*/
+.asesoria{
+  padding: 5em 0;
+  background-color: var(--bg-azul-intermedio-1);
+}
+
+.asesoria h2{
+  font-family: Avenir;
+  font-size: 110px;
+  line-height: 40%;
+  padding-top: 1em;
+}
+
+.asesoria h2 span {
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.asesoria .items-asesoria{ padding-top: 2em; }
+.asesoria .items-asesoria img { width: 70px; }
+.asesoria .items-asesoria div:first-child img { width: 50px; }
+.asesoria .items-asesoria p {
+  font-family: Avenir;
+  line-height: 20px;
+  padding-top: 1em;
+}
+
+
+/*------------------- Media Querys -------------------*/
+@media(max-width: 1920px){
+  
+}
+
+@media(max-width: 1580px){
+  .nosotros .quienes-somos .description { padding-left: 12em;}
+}
+
+@media(max-width: 1400px){
+  
+}
+
+@media(max-width: 1200px){
+  .navbar .w-nav{ width: 90%; }
+
+  .nosotros .quienes-somos .description { padding-left: 10em; }
+  .nosotros .quienes-somos h2 { font-size: 100px; }
+  .nosotros .quienes-somos h2 span { font-size: 25px;}
+}
+
+@media(max-width: 1100px){
+  
+}
+
+@media(max-width: 991px){
+  .nosotros .quienes-somos .description { padding-left: 4em;}
+  .nosotros .quienes-somos h2 { font-size: 90px; line-height: 75px;}
+  .nosotros .quienes-somos h2 span { font-size: 22px;}
+  
+}
+
+@media(max-width: 767px){
+  .nosotros .quienes-somos .description { padding: 0 1em 0 1em;}
+  .nosotros .quienes-somos button { font-size: 11px; }
+  .nosotros .quienes-somos h2 { 
+    font-size: 80px; 
+    line-height: 70px; 
+    text-align: center;
+  }
+  .nosotros .quienes-somos h2 span { font-size: 20px;}
+  
+}
+
+@media(max-width: 640px){
+  .nosotros .quienes-somos h2 { 
+    font-size: 70px; 
+    line-height: 60px; 
+    letter-spacing: -5px;
+  }
+  .nosotros .quienes-somos h2 span { font-size: 18px;}
+  .nosotros .quienes-somos .description { padding: 0 0.5em 0 0.5em;}
+}
+
+@media(max-width: 540px){
+  .nosotros h3 { font-size: 13px;}
+}
+
+@media(max-width: 480px){
+  
+}
+
+@media(max-width: 360px){
+  
+}
