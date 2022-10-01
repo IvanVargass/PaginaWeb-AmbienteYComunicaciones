@@ -96,12 +96,13 @@ html {
 }
 
 /*------------------- Equipo -------------------*/
-.equipo { padding: 4em; }
-.equipo img{ width: 45%; }
+.equipo { padding: 4em 2em; }
+.equipo img{ width: 35%; }
 .equipo p {
   position: relative;
   top: 80px;
   left: -70px;
+  line-height: 100%;
 }
 
 /*------------------- Alcance Global -------------------*/
@@ -231,10 +232,12 @@ html {
 
 @media(max-width: 1580px){
   .nosotros .quienes-somos .description { padding-left: 12em;}
+
+  .equipo p{ left: -0.8em;}
 }
 
 @media(max-width: 1400px){
-  
+  .equipo img{ width: 40%;}
 }
 
 @media(max-width: 1200px){
@@ -253,6 +256,8 @@ html {
   .nosotros .quienes-somos .description { padding-left: 4em;}
   .nosotros .quienes-somos h2 { font-size: 90px; line-height: 75px;}
   .nosotros .quienes-somos h2 span { font-size: 22px;}
+
+  .equipo img { width: 35%;}
   
 }
 
@@ -265,6 +270,8 @@ html {
     text-align: center;
   }
   .nosotros .quienes-somos h2 span { font-size: 20px;}
+
+  .equipo img{ width: 30%; }
   
 }
 
@@ -276,10 +283,23 @@ html {
   }
   .nosotros .quienes-somos h2 span { font-size: 18px;}
   .nosotros .quienes-somos .description { padding: 0 0.5em 0 0.5em;}
+
+  .equipo{padding: 2em 1em;}
+  .equipo p {
+    top: 80px;
+    font-size: 13px;
+  }
 }
 
 @media(max-width: 540px){
   .nosotros h3 { font-size: 13px;}
+
+  .equipo img {width: 35%;}
+  .equipo p{
+    top: 60px;
+    left: 0.6em;
+    font-size: 11px;
+  }
 }
 
 @media(max-width: 480px){
@@ -287,5 +307,6 @@ html {
 }
 
 @media(max-width: 360px){
-  
+  .equipo{ padding: 3em 0em; }
+
 }
