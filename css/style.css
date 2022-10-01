@@ -295,15 +295,15 @@ html {
   .nosotros h3 { font-size: 13px;}
 
   .equipo img {width: 35%;}
-  .equipo p{
+  .equipo p {
     top: 60px;
-    left: 0.6em;
-    font-size: 11px;
+    left: 0.5em;
+    font-size: 12px;
   }
 }
 
-@media(max-width: 480px){
-  
+@media(max-width: 420px){
+  .equipo p{font-size: 11px; }
 }
 
 @media(max-width: 360px){
