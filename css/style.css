@@ -109,15 +109,19 @@ html {
 .alcance-global{
   background-image: url('../img/Fondo_Mapa.png');
   background-size: cover;
-  padding: 9em 0 11em 0;
+  padding: 8em 0 10em 0;
 }
 .alcance-global h2 span, .nuestro-compromiso h2 span { 
-  font-size: 36px;
-  letter-spacing: 27px;
+  font-size: 40px;
+  letter-spacing: 40px;
 }
 .alcance-global h2, .nuestro-compromiso h2{
-  font-size: 90px;
-  line-height: 60px;
+  font-size: 103px;
+  line-height: 103px;
+}
+
+.alcance-global p {
+  font-size: 18px;
 }
 
 /*------------------- Nuestro Compromiso -------------------*/
@@ -230,6 +234,10 @@ html {
   
 }
 
+@media(max-width: 1700px){
+  .alcance-global{padding: 6em 0 8em 0;}
+}
+
 @media(max-width: 1580px){
   .nosotros .quienes-somos .description { padding-left: 12em;}
 
@@ -246,10 +254,17 @@ html {
   .nosotros .quienes-somos .description { padding-left: 10em; }
   .nosotros .quienes-somos h2 { font-size: 100px; }
   .nosotros .quienes-somos h2 span { font-size: 25px;}
+
+  .alcance-global h2 span, .nuestro-compromiso h2 span{ font-size: 30px; }
+  .alcance-global h2, .nuestro-compromiso h2{
+    font-size: 83px;
+    line-height: 83px;
+  }
+  .alcance-global p {font-size: 16px;}
 }
 
 @media(max-width: 1100px){
-  
+  .alcance-global { padding: 4em 0 6em 0;}
 }
 
 @media(max-width: 991px){
@@ -258,7 +273,16 @@ html {
   .nosotros .quienes-somos h2 span { font-size: 22px;}
 
   .equipo img { width: 35%;}
-  
+
+  .alcance-global h2 span, .nuestro-compromiso h2 span { 
+    font-size: 25px;
+    letter-spacing: 30px;
+  }
+  .alcance-global h2, .nuestro-compromiso h2 {
+    font-size: 75px;
+    line-height: 75px;
+  }
+  .alcance-global p { font-size: 15px;}
 }
 
 @media(max-width: 767px){
@@ -289,6 +313,17 @@ html {
     top: 80px;
     font-size: 13px;
   }
+
+  .alcance-global h2 span, .nuestro-compromiso h2 span {
+    font-size: 22px;
+    letter-spacing: 22px;
+  }
+  .alcance-global h2, .nuestro-compromiso h2 { 
+    font-size: 65px;
+    line-height: 65px;
+  }
+
+
 }
 
 @media(max-width: 540px){
