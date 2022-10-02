@@ -115,24 +115,28 @@ html {
   font-size: 40px;
   letter-spacing: 40px;
 }
-.alcance-global h2, .nuestro-compromiso h2{
+.alcance-global h2 {
   font-size: 103px;
   line-height: 103px;
 }
 
-.alcance-global p {
+.alcance-global p, .nuestro-compromiso p {
   font-size: 18px;
 }
 
 /*------------------- Nuestro Compromiso -------------------*/
 .nuestro-compromiso{
-  padding: 5em 0 8em 0;
+  padding: 3em 0 6em 0;
   background-color: var(--bg-azul-claro);
 }
-.nuestro-compromiso img{ width: 95%; }
+.nuestro-compromiso img { width: 9em; }
 .nuestro-compromiso p { padding-top: 35px; }
-.nuestro-compromiso .cont-compromisos{ padding: 40px 0 0 10px; }
-.nuestro-compromiso h2 { letter-spacing: -7px; }
+.nuestro-compromiso .cont-compromisos{ padding: 40px 0 0 40px; }
+.nuestro-compromiso h2 { 
+  letter-spacing: -7px; 
+  line-height: 90px;
+  font-size: 110px;
+}
 
 /*------------------- Experiencia -------------------*/
 .experiencia{
@@ -236,6 +240,9 @@ html {
 
 @media(max-width: 1700px){
   .alcance-global{padding: 6em 0 8em 0;}
+
+  .nuestro-compromiso img {width: 8em;}
+
 }
 
 @media(max-width: 1580px){
@@ -246,6 +253,9 @@ html {
 
 @media(max-width: 1400px){
   .equipo img{ width: 40%;}
+
+  .nuestro-compromiso .cont-compromisos {padding: 20px 0 0 40px;}
+  .nuestro-compromiso img {padding-top: 2em;}
 }
 
 @media(max-width: 1200px){
@@ -260,11 +270,13 @@ html {
     font-size: 83px;
     line-height: 83px;
   }
-  .alcance-global p {font-size: 16px;}
+  .alcance-global p, .nuestro-compromiso p {font-size: 16px;}
 }
 
 @media(max-width: 1100px){
   .alcance-global { padding: 4em 0 6em 0;}
+
+  .nuestro-compromiso img {width: 7em;}
 }
 
 @media(max-width: 991px){
@@ -282,7 +294,7 @@ html {
     font-size: 75px;
     line-height: 75px;
   }
-  .alcance-global p { font-size: 15px;}
+  .alcance-global p, .nuestro-compromiso { font-size: 15px;}
 }
 
 @media(max-width: 767px){
@@ -296,6 +308,8 @@ html {
   .nosotros .quienes-somos h2 span { font-size: 20px;}
 
   .equipo img{ width: 30%; }
+
+  .nuestro-compromiso .cont-compromisos{padding: 20px 0 0 0;}
   
 }
 
@@ -318,9 +332,14 @@ html {
     font-size: 22px;
     letter-spacing: 22px;
   }
-  .alcance-global h2, .nuestro-compromiso h2 { 
-    font-size: 65px;
-    line-height: 65px;
+  .alcance-global h2 { 
+    font-size: 70px;
+    line-height: 70px;
+  }
+  .nuestro-compromiso h2 { 
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -2px;
   }
 
 
@@ -335,6 +354,17 @@ html {
     left: 0.5em;
     font-size: 12px;
   }
+
+  .alcance-global h2 { 
+    font-size: 58px;
+    line-height: 58px;
+  }
+  .nuestro-compromiso h2 { 
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -3px;
+  }
+
 }
 
 @media(max-width: 420px){
