@@ -143,12 +143,13 @@ html {
   padding: 4em 0;
   background-color: var(--bg-azul-oscuro);
 }
-.experiencia img { width: 80%; position: relative; left: 100px;}
+.experiencia img { width: 90%; position: relative; left: 100px;}
 .experiencia h2 {
   padding-top: 0.7em;
-  font-family: Avenir;
-  font-size: 130px;
+  font-family: Avenir-Black;
+  font-size: 160px;
   line-height: 90%;
+  position: relative;
 }
 
 /*------------------- Servicios -------------------*/
@@ -243,12 +244,16 @@ html {
 
   .nuestro-compromiso img {width: 8em;}
 
+  .experiencia h2 {padding-left: 0.3; font-size: 145px;}
+
 }
 
 @media(max-width: 1580px){
   .nosotros .quienes-somos .description { padding-left: 12em;}
 
   .equipo p{ left: -0.8em;}
+
+  .experiencia h2 { padding-top: 0.5em; font-size: 135px;}
 }
 
 @media(max-width: 1400px){
@@ -256,6 +261,13 @@ html {
 
   .nuestro-compromiso .cont-compromisos {padding: 20px 0 0 40px;}
   .nuestro-compromiso img {padding-top: 2em;}
+
+  .experiencia img { left: 10px;}
+  .experiencia h2 {
+    padding-left: 0; 
+    left: -50px;
+    font-size: 120px;
+  }
 }
 
 @media(max-width: 1200px){
@@ -277,6 +289,16 @@ html {
   .alcance-global { padding: 4em 0 6em 0;}
 
   .nuestro-compromiso img {width: 7em;}
+
+  .experiencia img{
+    position: relative;
+    left: 20px;
+  }
+  .experiencia h2 { 
+    padding-top: 0.3em;
+    font-size: 110px;
+    left: -20px;
+  }
 }
 
 @media(max-width: 991px){
@@ -295,9 +317,11 @@ html {
     line-height: 75px;
   }
   .alcance-global p, .nuestro-compromiso { font-size: 15px;}
+
+  .experiencia h2 { font-size: 90px;}
 }
 
-@media(max-width: 767px){
+@media(max-width: 768px){
   .nosotros .quienes-somos .description { padding: 0 1em 0 1em;}
   .nosotros .quienes-somos button { font-size: 11px; }
   .nosotros .quienes-somos h2 { 
@@ -310,7 +334,14 @@ html {
   .equipo img{ width: 30%; }
 
   .nuestro-compromiso .cont-compromisos{padding: 20px 0 0 0;}
-  
+
+  .experiencia h2 { 
+    text-align: center;
+    left: 0;
+    font-size: 75px;
+    padding: 0.7em 0 0 0; 
+  }
+  .experiencia h2 br{ display: none;}
 }
 
 @media(max-width: 640px){
@@ -342,7 +373,15 @@ html {
     letter-spacing: -2px;
   }
 
+  .experiencia img { 
+    left: 0;
+    width: 100%;
+  }
+  .experiencia h2 { font-size: 65px;}
+}
 
+@media(max-width: 575px){
+  .experiencia h2 {padding: 0.9em 0 0 0;  font-size: 60px;}
 }
 
 @media(max-width: 540px){
@@ -365,10 +404,14 @@ html {
     letter-spacing: -3px;
   }
 
+  .experiencia h2 { font-size: 50px;}
+
 }
 
 @media(max-width: 420px){
   .equipo p{font-size: 11px; }
+
+  .experiencia h2 { font-size: 45px;}
 }
 
 @media(max-width: 360px){
