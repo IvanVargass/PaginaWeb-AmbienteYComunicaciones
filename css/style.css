@@ -156,25 +156,30 @@ html {
 .servicios { padding: 3em 0 6em 0;}
 .servicios .produccion h2 {
   padding-top: 0.8em;
-  font-family: Avenir;
+  font-family: Avenir-Black;
   color: var(--color-gris-intermedio);
-  font-size: 90px;
-  line-height: 70%;
-  letter-spacing: -2px;
+  font-size: 120px;
+  line-height: 50%;
+  letter-spacing: -6px;
 }
 .servicios .produccion h2 span { 
   color: var(--color-gris-oscuro);
-  font-size: 60px;
+  font-size: 80px;
 }
 
-.servicios .eventos{ padding-top: 3em;}
+.servicios .eventos{ padding-top: 2em;}
 .servicios .eventos h3 {
+  font-family: Avenir;
   font-size: 38px;
   line-height: 30%;
   letter-spacing: -2px;
 }
 
-.servicios .eventos h3 span { font-size: 50px; }
+.servicios .eventos h3 span {
+  font-family: Avenir-black; 
+  font-size: 60px; 
+  padding-left: 0.5em;
+}
 .servicios .eventos ul, .comunicacion-integral ul { 
   list-style-image: url("../img/icono-eventos-2.png"); 
   color: var(--color-gris-oscuro);
@@ -254,6 +259,11 @@ html {
   .equipo p{ left: -0.8em;}
 
   .experiencia h2 { padding-top: 0.5em; font-size: 135px;}
+
+  .servicios .produccion h2{ font-size: 105px; line-height: 40%;}
+  .servicios .produccion h2 span{ font-size: 70px;}
+  .servicios .eventos h3 {font-size: 35px;}
+  .servicios .eventos h3 span{font-size: 55px;}
 }
 
 @media(max-width: 1400px){
@@ -268,6 +278,10 @@ html {
     left: -50px;
     font-size: 120px;
   }
+
+  .servicios {padding: 3em 0 5em 0;}
+  .servicios .produccion h2{ font-size: 95px; line-height: 40%;}
+  .servicios .produccion h2 span{ font-size: 60px;}
 }
 
 @media(max-width: 1200px){
@@ -283,6 +297,15 @@ html {
     line-height: 83px;
   }
   .alcance-global p, .nuestro-compromiso p {font-size: 16px;}
+
+  .servicios .produccion h2{ 
+    font-size: 80px; 
+    line-height: 40%;
+    padding-top: 1em;
+  }
+  .servicios .produccion h2 span{ font-size: 55px;}
+  .servicios .eventos h3 {font-size: 32px;}
+  .servicios .eventos h3 span{font-size: 45px;}
 }
 
 @media(max-width: 1100px){
@@ -319,6 +342,13 @@ html {
   .alcance-global p, .nuestro-compromiso { font-size: 15px;}
 
   .experiencia h2 { font-size: 90px;}
+
+  .servicios {padding: 4em 0 4em 0;}
+  .servicios .produccion h2{ 
+    font-size: 70px; 
+    line-height: 40%;
+  }
+  .servicios .produccion h2 span{ font-size: 45px;}
 }
 
 @media(max-width: 768px){
@@ -342,6 +372,9 @@ html {
     padding: 0.7em 0 0 0; 
   }
   .experiencia h2 br{ display: none;}
+
+  .servicios .eventos h3 {font-size: 28px;}
+  .servicios .eventos h3 span{font-size: 40px;}
 }
 
 @media(max-width: 640px){
@@ -377,11 +410,20 @@ html {
     left: 0;
     width: 100%;
   }
-  .experiencia h2 { font-size: 65px;}
+  .experiencia h2, .servicios .produccion h2 { font-size: 65px;}
 }
 
 @media(max-width: 575px){
   .experiencia h2 {padding: 0.9em 0 0 0;  font-size: 60px;}
+
+  .servicios .produccion h2 { 
+    font-size: 60px;
+    letter-spacing: -4px;
+    padding-top: 1.3em;
+    padding-bottom: 0.3em;
+  }
+
+  .servicios .eventos h3 span {font-size: 35px;}
 }
 
 @media(max-width: 540px){
@@ -404,7 +446,9 @@ html {
     letter-spacing: -3px;
   }
 
-  .experiencia h2 { font-size: 50px;}
+  .experiencia h2, .servicios .produccion h2 { font-size: 50px;}
+  .servicios .produccion h2 span {font-size: 35px;}
+
 
 }
 
