@@ -199,7 +199,7 @@ html {
   font-size: 90px;
   line-height: 40%;
   letter-spacing: -5px;
-  padding-top: 1.8em;
+  padding-top: 1.4em;
 }
 
 .comunicacion-integral h2 span { 
@@ -213,28 +213,31 @@ html {
 
 /*------------------- Asesoría -------------------*/
 .asesoria{
-  padding: 5em 0;
+  padding: 4em 0 5em 0;
   background-color: var(--bg-azul-intermedio-1);
 }
 
 .asesoria h2{
-  font-family: Avenir;
-  font-size: 110px;
+  font-family: Avenir-black;
+  font-size: 120px;
   line-height: 40%;
-  padding-top: 1em;
+  padding-top: 0.9em;
+  letter-spacing: -5px;
 }
 
 .asesoria h2 span {
   font-size: 25px;
   letter-spacing: 10px;
+  font-family: Avenir;
 }
 
 .asesoria .items-asesoria{ padding-top: 2em; }
-.asesoria .items-asesoria img { width: 70px; }
-.asesoria .items-asesoria div:first-child img { width: 50px; }
+.asesoria .items-asesoria img { width: 80px; }
+.asesoria .items-asesoria div:first-child img { width: 60px; }
 .asesoria .items-asesoria p {
   font-family: Avenir;
-  line-height: 20px;
+  line-height: 25px;
+  line-height: 130%;
   padding-top: 1em;
 }
 
@@ -251,6 +254,7 @@ html {
 
   .experiencia h2 {padding-left: 0.3; font-size: 145px;}
 
+  .comunicacion-integral img{width: 92%;}
 }
 
 @media(max-width: 1580px){
@@ -269,7 +273,9 @@ html {
     font-size: 80px;
     padding-top: 1.4em;
   }
-  .comunicacion-integral img{ width: 90%;}
+  .comunicacion-integral img{ width: 95%;}
+
+  .asesoria h2{ font-size: 105px; padding-top: 0.7em;}
   
 }
 
@@ -294,7 +300,12 @@ html {
     padding-top: 1.2em;
   }
   .comunicacion-integral h2 span{font-size: 60px;}
-  .comunicacion-integral img{ width: 95%;}
+  .comunicacion-integral img{ width: 85%;}
+
+  .asesoria h2{ font-size: 95px; padding-top: 0.6em;}
+  .asesoria h2 span{ font-size: 22px;}
+  .asesoria .items-asesoria img{width: 70px;}
+  .asesoria .items-asesoria div:first-child img{width: 52px;}
 }
 
 @media(max-width: 1200px){
@@ -326,6 +337,8 @@ html {
   }
   .comunicacion-integral h2 span{font-size: 50px;}
   .comunicacion-integral img{ width: 100%;}
+
+  .asesoria h2{font-size: 85px;}
 }
 
 @media(max-width: 1100px){
@@ -342,6 +355,8 @@ html {
     font-size: 110px;
     left: -20px;
   }
+
+  .comunicacion-integral img{width: 104%;}
 }
 
 @media(max-width: 991px){
@@ -380,7 +395,11 @@ html {
 }
 
 @media(max-width: 850px){
-  .comunicacion-integral h2{ font-size: 45px; letter-spacing: -3px;}
+  .comunicacion-integral h2{ font-size: 55px; letter-spacing: -3px;}
+  .comunicacion-integral img{width: 100%;}
+
+  .asesoria h2{font-size: 75px;}
+  .asesoria h2 span{font-size: 20px;}
 }
 
 @media(max-width: 768px){
@@ -411,8 +430,12 @@ html {
   .comunicacion-integral img {
     width: 70%;
     padding-top: 3em;
-    padding-bottom: 2em;
+    padding-bottom: 3em;
   }
+
+  .asesoria .items-asesoria img{width: 80px; padding-bottom: 0.5em;}
+  .asesoria .items-asesoria div:first-child img{width: 58px;}
+  .asesoria .items-asesoria div{padding: 1em 0 1.7em 0;}
 }
 
 @media(max-width: 640px){
@@ -463,8 +486,14 @@ html {
 
   .servicios .eventos h3 span {font-size: 35px;}
 
+  .comunicacion-integral h2{font-size: 45px;}
   .comunicacion-integral img {width: 80%;}
   .comunicacion-integral ul{padding-left: 2.8em !important;}
+
+  .asesoria h2{font-size: 65px;}
+  .asesoria .items-asesoria{padding-top: 0.3em;}
+  .asesoria .items-asesoria img{font-size: 70px; padding-bottom: 0.2em;}
+  .asesoria .items-asesoria div:first-child img{font-size: 48px;}
 }
 
 @media(max-width: 540px){
@@ -500,6 +529,9 @@ html {
   .experiencia h2 { font-size: 45px;}
 
   .comunicacion-integral img {width: 90%;}
+  .comunicacion-integral h2{font-size: 40px; }
+
+  .asesoria h2{font-size: 55px;}
 }
 
 @media(max-width: 360px){
