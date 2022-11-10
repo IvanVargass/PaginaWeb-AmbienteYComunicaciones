@@ -241,6 +241,50 @@ html {
   padding-top: 1em;
 }
 
+/*------------------- Carbono Neutro -------------------*/
+.carbono-neutro{
+  background-color: #539138;
+  padding: 6em 0 5em 0;
+}
+
+.carbono-neutro img{
+  position: absolute;
+  left: 65%;
+  width: 170px;
+}
+
+.carbono-neutro h4, .carbono-neutro h2 { font-family: 'Avenir-Black'; }
+.carbono-neutro h3, .carbono-neutro p, .carbono-neutro span { font-family: Avenir; }
+.carbono-neutro p, .carbono-neutro span { font-size: 19px;}
+
+.carbono-neutro span {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 2px 15px;
+}
+
+.carbono-neutro h4 {
+  font-size: 22px;
+  background-color: #fff;
+  width: fit-content;
+  color: #539138;
+  padding: 0 0.3em;
+  letter-spacing: 0.5em;
+}
+
+.carbono-neutro h3 {
+  letter-spacing: 0.8em;
+  font-size: 38px;
+}
+
+.carbono-neutro h2 {
+  font-family: 'Avenir-Black';
+  font-size: 155px;
+  letter-spacing: -15px;
+  line-height: 100%;
+  margin-left: -5px;
+}
+
 
 /*------------------- Media Querys -------------------*/
 @media(max-width: 1920px){
@@ -276,6 +320,11 @@ html {
   .comunicacion-integral img{ width: 95%;}
 
   .asesoria h2{ font-size: 105px; padding-top: 0.7em;}
+
+  .carbono-neutro h4 {font-size: 20px;}
+  .carbono-neutro h3{font-size: 32px;}
+  .carbono-neutro h2{font-size: 135px;}
+  .carbono-neutro img{width: 150px; left: 70%;}
   
 }
 
@@ -492,8 +541,8 @@ html {
 
   .asesoria h2{font-size: 65px;}
   .asesoria .items-asesoria{padding-top: 0.3em;}
-  .asesoria .items-asesoria img{font-size: 70px; padding-bottom: 0.2em;}
-  .asesoria .items-asesoria div:first-child img{font-size: 48px;}
+  .asesoria .items-asesoria img{font-size: 62px; padding-bottom: 0.2em;}
+  .asesoria .items-asesoria div:first-child img{font-size: 40px;}
 }
 
 @media(max-width: 540px){
