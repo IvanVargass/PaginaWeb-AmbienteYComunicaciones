@@ -285,7 +285,35 @@ html {
   margin-left: -5px;
 }
 
+/*------------------- Eventos Ambientales -------------------*/
+.eventos-ambientales{
+  padding: 3em 0;
+}
 
+.eventos-ambientales h2{ 
+  font-size: 50px; 
+  color: var(--color-gris-oscuro);
+  font-weight: 500;
+}
+ 
+/*------------------- Grupos de Difusión -------------------*/
+.grupos-difusion{padding: 3em 0;}
+
+.grupos-difusion h2{
+  font-size: 40px;
+  color: var(--color-gris-oscuro);
+  font-weight: 500;
+}
+
+.grupos-difusion p{
+  font-size: 25px;
+  color: var(--color-gris-intermedio);
+  font-weight: 400;
+}
+
+.grupos-difusion img{
+  width: 100%;
+}
 
 /*------------------- Media Querys -------------------*/
 @media(max-width: 1920px){
@@ -326,7 +354,11 @@ html {
   .carbono-neutro h3{font-size: 32px;}
   .carbono-neutro h2{font-size: 135px;}
   .carbono-neutro img{width: 150px; left: 70%;}
+
+  .eventos-ambientales h2{font-size: 45px;}
   
+  .grupos-difusion h2{font-size: 36px;}
+  .grupos-difusion p{font-size: 22px;}
 }
 
 @media(max-width: 1400px){
@@ -356,6 +388,8 @@ html {
   .asesoria h2 span{ font-size: 22px;}
   .asesoria .items-asesoria img{width: 70px;}
   .asesoria .items-asesoria div:first-child img{width: 52px;}
+  
+  .grupos-difusion img{width: 80%;}
 }
 
 @media(max-width: 1200px){
@@ -397,6 +431,12 @@ html {
   .carbono-neutro h3{ font-size: 26px; }
   .carbono-neutro h4{ font-size: 18px; }
   .carbono-neutro img{width: 110px; left: 77%;}
+
+  .eventos-ambientales h2{font-size: 40px;}
+
+  .grupos-difusion h2{font-size: 30px;}
+  .grupos-difusion p{font-size: 20px;}
+  .grupos-difusion img{width: 90%;}
 }
 
 @media(max-width: 1100px){
@@ -465,6 +505,12 @@ html {
   .carbono-neutro h3{font-size: 24px;}
   .carbono-neutro p, .carbono-neutro span {font-size: 18px;}
   .carbono-neutro img{width: 100px;}
+
+  .eventos-ambientales h2{font-size: 30px;}
+
+  .grupos-difusion p{font-size: 19px;}
+  .grupos-difusion h2{font-size: 25px;}
+  .grupos-difusion img{width: 95%;}
 }
 
 @media(max-width: 768px){
@@ -501,6 +547,8 @@ html {
   .asesoria .items-asesoria img{width: 80px; padding-bottom: 0.5em;}
   .asesoria .items-asesoria div:first-child img{width: 58px;}
   .asesoria .items-asesoria div{padding: 1em 0 1.7em 0;}
+
+  .grupos-difusion img{width: 80%;}
 }
 
 @media(max-width: 640px){
@@ -570,6 +618,12 @@ html {
   .carbono-neutro h3{font-size: 20px; letter-spacing: 12px;}
   .carbono-neutro h4{font-size: 15px;}
   .carbono-neutro p, .carbono-neutro span{font-size: 16px;}
+
+  .eventos-ambientales h2{font-size: 27px;}
+
+  .grupos-difusion h2{font-size: 23px;}
+  .grupos-difusion p{font-size: 17px;}
+  .grupos-difusion img{width: 70%;}
 }
 
 @media(max-width: 540px){
@@ -596,7 +650,7 @@ html {
 
   .servicios .produccion h2 span {font-size: 35px;}
   
-
+  .grupos-difusion img{width: 75%;}
 }
 
 @media(max-width: 420px){
@@ -615,6 +669,8 @@ html {
 
   .carbono-neutro h2{font-size: 65px; letter-spacing: -5px;}
 
+  .grupos-difusion h2{font-size: 22px;}
+  .grupos-difusion img{width: 85%;}
 }
 
 @media(max-width: 360px){
