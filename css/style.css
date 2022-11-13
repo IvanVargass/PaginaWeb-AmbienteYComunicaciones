@@ -286,6 +286,7 @@ html {
 }
 
 
+
 /*------------------- Media Querys -------------------*/
 @media(max-width: 1920px){
   
@@ -388,6 +389,14 @@ html {
   .comunicacion-integral img{ width: 100%;}
 
   .asesoria h2{font-size: 85px;}
+
+  .carbono-neutro h2{
+    font-size: 95px;
+    letter-spacing: -9px;
+  }
+  .carbono-neutro h3{ font-size: 26px; }
+  .carbono-neutro h4{ font-size: 18px; }
+  .carbono-neutro img{width: 110px; left: 77%;}
 }
 
 @media(max-width: 1100px){
@@ -449,6 +458,13 @@ html {
 
   .asesoria h2{font-size: 75px;}
   .asesoria h2 span{font-size: 20px;}
+
+  .carbono-neutro p br{display: none;}
+
+  .carbono-neutro h2{font-size: 85px;}
+  .carbono-neutro h3{font-size: 24px;}
+  .carbono-neutro p, .carbono-neutro span {font-size: 18px;}
+  .carbono-neutro img{width: 100px;}
 }
 
 @media(max-width: 768px){
@@ -541,8 +557,19 @@ html {
 
   .asesoria h2{font-size: 65px;}
   .asesoria .items-asesoria{padding-top: 0.3em;}
-  .asesoria .items-asesoria img{font-size: 62px; padding-bottom: 0.2em;}
-  .asesoria .items-asesoria div:first-child img{font-size: 40px;}
+  .asesoria .items-asesoria img{width: 75px; padding-bottom: 0.2em;}
+  .asesoria .items-asesoria div:first-child img{width: 55px;}
+
+  .carbono-neutro{padding: 4em 0 6em 0;}
+  .carbono-neutro img{
+    position: initial;
+    padding-bottom: 2em;
+  }
+
+  .carbono-neutro h2{font-size: 75px;}
+  .carbono-neutro h3{font-size: 20px; letter-spacing: 12px;}
+  .carbono-neutro h4{font-size: 15px;}
+  .carbono-neutro p, .carbono-neutro span{font-size: 16px;}
 }
 
 @media(max-width: 540px){
@@ -581,6 +608,13 @@ html {
   .comunicacion-integral h2{font-size: 40px; }
 
   .asesoria h2{font-size: 55px;}
+  .asesoria .items-asesoria div:first-child img{width: 40px;}
+  .asesoria .items-asesoria img{width: 60px;}
+  
+  .carbono-neutro{padding: 4em 0 5em 0;}
+
+  .carbono-neutro h2{font-size: 65px; letter-spacing: -5px;}
+
 }
 
 @media(max-width: 360px){
