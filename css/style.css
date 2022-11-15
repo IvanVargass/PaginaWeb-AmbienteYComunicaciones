@@ -372,6 +372,59 @@ html {
   margin: 0 auto;
 }
 
+/*------------------- Footer -------------------*/
+footer{
+  background-color: #191919;
+  color: #fff;
+  font-family: Avenir;
+}
+
+footer .contacto{
+  padding: 4em 0;
+}
+
+footer .contacto img{
+  width: 50%;
+}
+
+footer .contacto h3 {
+  font-size: 24px;
+  letter-spacing: 15px;
+  font-family: Avenir-Black;
+  padding-bottom: 0.5em;
+}
+
+footer .separador{
+  background-color: #fff;
+  padding: 1px 0;
+  margin: 0.8em 0;
+  width: 95%;
+}
+
+footer p{
+  font-size: 15px;
+}
+
+footer .iconos{
+  padding-top: 1em;
+}
+
+footer a{
+  color: transparent;
+  margin: 0 0.4em;
+}
+
+footer .contacto .iconos a i{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer .derechos-reservados{
+  background-color: #bcbcbc;
+  padding: 0.8em 0 0.4em 0;
+}
+
 
 /*------------------- Media Querys -------------------*/
 @media(max-width: 1920px){
@@ -386,6 +439,8 @@ html {
   .experiencia h2 {padding-left: 0.3; font-size: 145px;}
 
   .comunicacion-integral img{width: 92%;}
+
+  footer .contacto img{width: 60%;}
 }
 
 @media(max-width: 1580px){
@@ -417,6 +472,8 @@ html {
   
   .grupos-difusion h2{font-size: 36px;}
   .grupos-difusion p{font-size: 22px;}
+
+  footer .contacto img{width: 70%;}
 }
 
 @media(max-width: 1400px){
@@ -503,6 +560,7 @@ html {
 
   .quienes-confian .banner-promocional{width: 100%;}
 
+  footer .contacto img{width: 80%;}
 }
 
 @media(max-width: 1100px){
@@ -559,6 +617,8 @@ html {
 
   .quienes-confian p br{display: none;}
   .quienes-confian .flecha{width: 50px;}
+
+  footer .contacto h3{font-size: 21px;}
 }
 
 @media(max-width: 850px){
@@ -586,6 +646,10 @@ html {
   .correo-electronico button{font-size: 17px;}
 
   .quienes-confian p{font-size: 15px; line-height: 115%;}
+
+  footer .contacto img{ width: 90%;}
+  footer .contacto h3{font-size: 19px;}
+  footer p{font-size: 14px;}
 }
 
 @media(max-width: 768px){
@@ -626,6 +690,8 @@ html {
   .grupos-difusion img{width: 80%;}
 
   .correo-electronico button{width: 90%;}
+
+  footer .contacto img{width: 170px;}
 }
 
 @media(max-width: 640px){
@@ -662,6 +728,8 @@ html {
     width: 100%;
   }
   .experiencia h2, .servicios .produccion h2 { font-size: 65px;}
+
+  footer .contacto img{width: 160px;}
 }
 
 @media(max-width: 575px){
@@ -735,6 +803,8 @@ html {
   .servicios .produccion h2 span {font-size: 35px;}
   
   .grupos-difusion img{width: 75%;}
+
+  footer .contacto img{width: 140px;}
 }
 
 @media(max-width: 420px){
@@ -755,6 +825,8 @@ html {
 
   .grupos-difusion h2{font-size: 22px;}
   .grupos-difusion img{width: 85%;}
+
+  footer .contacto img{width: 130px;}
 }
 
 @media(max-width: 360px){
