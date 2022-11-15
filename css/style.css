@@ -774,7 +774,7 @@ footer .derechos-reservados{
   .correo-electronico p{font-size: 17px;}
   .correo-electronico button{font-size: 15px; width: 100%;}
 
-  .quienes-confian h2{font-size: 30px; line-height: 110%;}
+  .quienes-confian h2{font-size: 33px; line-height: 110%;}
   .quienes-confian .flecha{width: 45px;}
 }
 
@@ -825,6 +825,8 @@ footer .derechos-reservados{
 
   .grupos-difusion h2{font-size: 22px;}
   .grupos-difusion img{width: 85%;}
+
+  .quienes-confian p{font-size: 14px;}
 
   footer .contacto img{width: 130px;}
 }
