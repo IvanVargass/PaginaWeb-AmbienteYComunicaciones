@@ -315,6 +315,64 @@ html {
   width: 100%;
 }
 
+/*------------------- Correo Electrónico -------------------*/
+.correo-electronico{
+  background-color: #70c955;
+  padding: 2em 0;
+}
+
+.correo-electronico h2{
+  font-size: 25px;
+}
+
+.correo-electronico p{
+  font-size: 20px;
+  padding-bottom: 0.7em;
+}
+
+.correo-electronico button{
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: #d3d3d3;
+  font-weight: bold;
+  width: 60%;
+  padding: 7px 5px;
+}
+
+/*------------------- Quienes confian -------------------*/
+.quienes-confian{
+  padding: 2em 0;
+}
+
+.quienes-confian h2{
+  font-size: 50px;
+  color: var(--color-gris-oscuro);
+  font-weight: 400;
+  font-family: Avenir;
+  letter-spacing: -2px;
+}
+
+.quienes-confian p{
+  font-size: 16px;
+  color: var(--color-gris-intermedio);
+  font-weight: 500;
+}
+
+.quienes-confian .flecha{
+  width: 70px;
+  padding: 1em 0;
+}
+
+.quienes-confian .banner-promocional{
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+
 /*------------------- Media Querys -------------------*/
 @media(max-width: 1920px){
   
@@ -390,6 +448,11 @@ html {
   .asesoria .items-asesoria div:first-child img{width: 52px;}
   
   .grupos-difusion img{width: 80%;}
+
+  .correo-electronico button{width: 70%;}
+
+  .quienes-confian h2{font-size: 45px;}
+  .quienes-confian .flecha{width: 60px;}
 }
 
 @media(max-width: 1200px){
@@ -432,11 +495,14 @@ html {
   .carbono-neutro h4{ font-size: 18px; }
   .carbono-neutro img{width: 110px; left: 77%;}
 
-  .eventos-ambientales h2{font-size: 40px;}
+  .eventos-ambientales h2, .quienes-confian h2{font-size: 40px;}
 
   .grupos-difusion h2{font-size: 30px;}
   .grupos-difusion p{font-size: 20px;}
   .grupos-difusion img{width: 90%;}
+
+  .quienes-confian .banner-promocional{width: 100%;}
+
 }
 
 @media(max-width: 1100px){
@@ -490,6 +556,9 @@ html {
   }
   .comunicacion-integral h2 span{font-size: 45px;}
   .comunicacion-integral img {width: 95%;}
+
+  .quienes-confian p br{display: none;}
+  .quienes-confian .flecha{width: 50px;}
 }
 
 @media(max-width: 850px){
@@ -511,6 +580,12 @@ html {
   .grupos-difusion p{font-size: 19px;}
   .grupos-difusion h2{font-size: 25px;}
   .grupos-difusion img{width: 95%;}
+
+  .correo-electronico h2{font-size: 22px;}
+  .correo-electronico p{font-size: 18px;}
+  .correo-electronico button{font-size: 17px;}
+
+  .quienes-confian p{font-size: 15px; line-height: 115%;}
 }
 
 @media(max-width: 768px){
@@ -549,6 +624,8 @@ html {
   .asesoria .items-asesoria div{padding: 1em 0 1.7em 0;}
 
   .grupos-difusion img{width: 80%;}
+
+  .correo-electronico button{width: 90%;}
 }
 
 @media(max-width: 640px){
@@ -624,6 +701,13 @@ html {
   .grupos-difusion h2{font-size: 23px;}
   .grupos-difusion p{font-size: 17px;}
   .grupos-difusion img{width: 70%;}
+
+  .correo-electronico h2{font-size: 19px;}
+  .correo-electronico p{font-size: 17px;}
+  .correo-electronico button{font-size: 15px; width: 100%;}
+
+  .quienes-confian h2{font-size: 30px; line-height: 110%;}
+  .quienes-confian .flecha{width: 45px;}
 }
 
 @media(max-width: 540px){
