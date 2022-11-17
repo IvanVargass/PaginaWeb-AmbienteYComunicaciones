@@ -295,9 +295,16 @@ html {
   color: var(--color-gris-oscuro);
   font-weight: 500;
 }
+
+.eventos-ambientales .swiper-slide img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  object-fit: cover;
+}
  
 /*------------------- Grupos de Difusión -------------------*/
-.grupos-difusion{padding: 3em 0;}
+.grupos-difusion{padding: 1em 0 3em 0;}
 
 .grupos-difusion h2{
   font-size: 40px;
@@ -370,6 +377,50 @@ html {
   width: 90%;
   display: block;
   margin: 0 auto;
+}
+
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide{
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.quienes-confian .swiper-slide img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  object-fit: cover;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color: rgb(37, 37, 37);
+}
+
+.quienes-confian .swiper-button-prev::after, .quienes-confian .swiper-button-next::after{
+  font-size: 20px;
+}
+
+.swiper-button-prev{
+  margin-left: -8px;
 }
 
 /*------------------- Footer -------------------*/
@@ -776,6 +827,7 @@ footer .derechos-reservados{
 
   .quienes-confian h2{font-size: 33px; line-height: 110%;}
   .quienes-confian .flecha{width: 45px;}
+  .quienes-confian .swiper-slide img{width: 90%;}
 }
 
 @media(max-width: 540px){
@@ -827,6 +879,7 @@ footer .derechos-reservados{
   .grupos-difusion img{width: 85%;}
 
   .quienes-confian p{font-size: 14px;}
+  .quienes-confian .swiper-slide img{width: 100%;}
 
   footer .contacto img{width: 130px;}
 }
