@@ -43,6 +43,29 @@ html {
   --color-gris-oscuro: #737373;
 }
 
+/*------------------- Botón Whatsapp flotante -------------------*/
+.btn-wsp{
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  bottom: 30px;
+  right: 30px;
+  background: #0df053;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 38px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.btn-wsp:hover{
+  text-decoration: none;
+  color: #0df053;
+  background-color: #fff;
+}
+
 /*------------------- Navbar -------------------*/
 .navbar .navbar-brand img { width: 150px; }
 .navbar .navbar-nav li > a { 
