@@ -64,6 +64,8 @@ html {
   text-decoration: none;
   color: #0df053;
   background-color: #fff;
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 /*------------------- Navbar -------------------*/
@@ -343,6 +345,11 @@ html {
 
 .grupos-difusion img{
   width: 100%;
+}
+
+.grupos-difusion img:hover{
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 /*------------------- Correo Electrónico -------------------*/
