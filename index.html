@@ -39,7 +39,7 @@
     <!-- Icono de Whatsapp flotante -->
 
     <!-- Menú -->
-    <nav class="navbar navbar-expand-lg d-flex bg-black justify-content-center">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center navbar-dark bg-black">
       <div class="container-fluid w-nav p-3">
         
         <a class="navbar-brand" href="#">
@@ -90,6 +90,12 @@
           </a>
           <a href="https://www.linkedin.com/company/ambiente-y-comunicaciones" target="_blank">
             <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://t.me/ambienteycomunicaciones" target="_blank">
+            <i class="bi bi-telegram"></i>
+          </a>
+          <a href="https://twitter.com/ambienteycom" target="_blank">
+            <i class="bi bi-twitter"></i>
           </a>
         </div>
 
@@ -472,13 +478,28 @@
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="img/eco-carrera.PNG" alt="">
+                  <img src="img/residuos_expo.png" alt="" id="1" data-bs-toggle="modal" data-bs-target="#modal_1">
+                  <div class="caja_azul d-none" id="caja_1" data-bs-toggle="modal" data-bs-target="#modal_1">
+                    <img src="img/ver_mas.png" alt="">
+                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/residuos-expo.PNG" alt="">
+                  <img src="img/cumbre_comunicacion.png" alt="" id="2" data-bs-toggle="modal" data-bs-target="#modal_2">
+                  <div class="caja_azul d-none" id="caja_2" data-bs-toggle="modal" data-bs-target="#modal_2">
+                    <img src="img/ver_mas.png" alt="">
+                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/eco-carrera.PNG" alt="">
+                  <img src="img/residuos-expo.PNG" alt="" id="3" data-bs-toggle="modal" data-bs-target="#modal_1">
+                  <div class="caja_azul d-none" id="caja_3" data-bs-toggle="modal" data-bs-target="#modal_1">
+                    <img src="img/ver_mas.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/cumbre_comunicacion.png" alt="" id="4" id="2" data-bs-toggle="modal" data-bs-target="#modal_2">
+                  <div class="caja_azul d-none" id="caja_4" data-bs-toggle="modal" data-bs-target="#modal_2">
+                    <img src="img/ver_mas.png" alt="">
+                  </div>
                 </div>
               </div>
               <div class="swiper-button-next"></div>
@@ -489,6 +510,67 @@
         </div>
       </div>
     </div>
+
+    <!-- Ventanas Modales -->
+    <div class="modal fade" id="modal_1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row sin-m d-flex justify-content-end pb-3">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="row sin-m d-flex justify-content-center">
+              <div class="col-11 col-sm-10  col-md-7 d-flex align-items-center justify-content-center">
+                <div>
+                  <h2 class="pb-3 text-center text-md-start">Residuos Expo</h2>
+                  <p class="text-justify pb-3">Residuos Expo fue el primer evento especializado en la gestión de residuos en México. Desde hace siete años es el punto de encuentro de la industria de gestión de residuos sólidos que busca conectar con la innovación, generar oportunidades de negocios y adquirir nuevos conocimientos.
+                  </p>
+                  <br>
+                  <div class="d-flex justify-content-center justify-content-md-start">
+                    <a href="https://residuosexpo.com/" target="_blank" class="text-center text-md-start">AGENDATE AL EVENTO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-11 col-sm-10  col-md-5">
+                <img src="img/residuos_expo.png" class="w-100" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal_2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row sin-m d-flex justify-content-end pb-3">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="row sin-m d-flex justify-content-center">
+              <div class="col-11 col-sm-10  col-md-7 d-flex align-items-center justify-content-center">
+                <div>
+                  <h2 class="pb-3 text-center text-md-start">Cumbre  Comunicación Ambiental y Política: Jóvenes y Acción Climática 2023</h2>
+                  <p class="text-justify pb-3">La CUMBRE es un espacio que tendrá cobertura en temáticas sobre las estrategias de comunicación y marketing político, como también para debatir los compromisos ambientales en las agendas de gobierno de las próximas elecciones regionales del 2023. 
+                    <br>
+                    Invitamos a los jóvenes que liderarán los tarjetones de gobernación, alcaldía, asamblea, concejo, ediles o miembros de las juntas administradoras locales  de los territorios del país a unirse a la CUMBRE de Comunicación Ambiental y Política.
+                  </p>
+                  <br>
+                  <div class="d-flex justify-content-center justify-content-md-start">
+                    <a href="https://bit.ly/3UD6Ivy " target="_blank" class="text-center text-md-start">AGENDATE AL EVENTO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-11 col-sm-10  col-md-5">
+                <img src="img/cumbre_comunicacion.png" class="w-100" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ventanas Modales -->
+
     <!-- Eventos Ambientales -->
 
     <!-- Grupos de Difusión -->
@@ -588,7 +670,7 @@
     <!-- Footer -->
     <footer>
       <div class="row d-flex justify-content-center sin-m">
-        <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-9">
+        <div class="col-md-11 col-lg-12 col-xl-11 col-xxl-10">
           <div class="row contacto sin-m d-flex justify-content-center">
             <div class="col-8 col-md-3 d-flex align-items-center justify-content-center pb-2 pt-md-0">
               <img src="img/Ambiente_Y_Comunicaciones.PNG" alt="Ambiente y Comunicaciones">
@@ -649,7 +731,10 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
     <script src="js/swiper.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

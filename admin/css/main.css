@@ -1,0 +1,13 @@
+.sin-m{ margin: 0; }
+
+body{
+    background-image: url('../img/bg-login.svg');
+}
+
+form{
+    margin-top: 25vh;
+    padding: 20px 30px 40px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+

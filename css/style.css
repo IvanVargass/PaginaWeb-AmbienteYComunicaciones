@@ -74,6 +74,14 @@ html {
     color: #fff;
     font-size: 16px; 
 }
+.navbar .navbar-nav .nav-link:hover{
+  padding-bottom: 8px;
+  border-bottom-style: solid;
+  border-bottom-width: 2.1px;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
 .navbar .w-nav{ width: 70%; }
 .navbar .iconos > i { font-size: 18px; }
 .navbar .iconos > a {
@@ -81,6 +89,16 @@ html {
     text-decoration: none;
     font-size: 16px;
     color: #fff
+}
+
+.menu-fixed{
+  z-index: 1000;
+  position: -webkit-sticky;  
+  position: sticky;
+  top: 0; 
+  background-color: #000 !important;
+  color: #fff !important;
+  
 }
 
 /*------------------- Nosotros -------------------*/
@@ -327,6 +345,59 @@ html {
   width: 90%;
   object-fit: cover;
 }
+
+.eventos-ambientales .caja_azul{
+  width: 90%;
+  height: 100%;
+  background-color: #1284aef0;
+  z-index: 100;
+  position: absolute;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eventos-ambientales .swiper-slide .caja_azul img{
+  width: 50%;
+  display: block;
+  transform: translate(5%, 200%);
+}
+
+.modal-dialog{
+  display: block;
+  margin: 0 auto;
+  top: 10%;
+  max-width: 900px !important;
+}
+
+.modal-content{
+  width: 900px;
+  margin: 0 auto;
+}
+
+.modal .modal-body h2{
+  font-family: Avenir;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.modal .modal-body p{
+  font-family: Avenir;
+  font-family: 20px;
+}
+
+.modal .modal-body a{
+  background-color: #868687;
+  color: #fff;
+  text-decoration: none;
+  padding: 3px 15px;
+  border-radius: 5px;
+  font-family: Avenir;
+  letter-spacing: 5px;
+  font-size: 15px;
+}
  
 /*------------------- Grupos de Difusión -------------------*/
 .grupos-difusion{padding: 1em 0 3em 0;}
@@ -554,10 +625,14 @@ footer .derechos-reservados{
   .grupos-difusion h2{font-size: 36px;}
   .grupos-difusion p{font-size: 22px;}
 
-  footer .contacto img{width: 70%;}
+  footer .contacto img{width: 60%;}
 }
 
 @media(max-width: 1400px){
+  .w-nav{
+    width: 80% !important;
+  }
+
   .equipo img{ width: 40%;}
 
   .nuestro-compromiso .cont-compromisos {padding: 20px 0 0 40px;}
@@ -591,6 +666,12 @@ footer .derechos-reservados{
 
   .quienes-confian h2{font-size: 45px;}
   .quienes-confian .flecha{width: 60px;}
+}
+
+@media(max-width: 1260px){
+  .w-nav{
+    width: 90% !important;
+  }
 }
 
 @media(max-width: 1200px){
@@ -641,10 +722,17 @@ footer .derechos-reservados{
 
   .quienes-confian .banner-promocional{width: 100%;}
 
-  footer .contacto img{width: 80%;}
+  footer .contacto img{width: 60%;}
 }
 
 @media(max-width: 1100px){
+  .modal-content{
+    width: 80%;
+  }
+  .w-nav{
+    width: 95% !important;
+  }
+
   .alcance-global { padding: 4em 0 6em 0;}
 
   .nuestro-compromiso img {width: 7em;}
@@ -663,6 +751,10 @@ footer .derechos-reservados{
 }
 
 @media(max-width: 991px){
+  .w-nav{
+    width: 90% !important;
+  }
+
   .nosotros .quienes-somos .description { padding-left: 4em;}
   .nosotros .quienes-somos h2 { font-size: 90px; line-height: 75px;}
   .nosotros .quienes-somos h2 span { font-size: 22px;}
@@ -700,6 +792,7 @@ footer .derechos-reservados{
   .quienes-confian .flecha{width: 50px;}
 
   footer .contacto h3{font-size: 21px;}
+  footer .contacto img{width: 80%;}
 }
 
 @media(max-width: 850px){
@@ -734,6 +827,16 @@ footer .derechos-reservados{
 }
 
 @media(max-width: 768px){
+  .modal-content{
+    width: 60%;
+  }
+
+  .modal .modal-content img{
+    margin-top: 25px;
+  }
+
+  .modal .modal-body a{font-size: 14px;}
+
   .nosotros .quienes-somos .description { padding: 0 1em 0 1em;}
   .nosotros .quienes-somos button { font-size: 11px; }
   .nosotros .quienes-somos h2 { 
@@ -776,6 +879,10 @@ footer .derechos-reservados{
 }
 
 @media(max-width: 640px){
+  .modal-content{
+    width: 70%;
+  }
+
   .nosotros .quienes-somos h2 { 
     font-size: 70px; 
     line-height: 60px; 
@@ -814,6 +921,9 @@ footer .derechos-reservados{
 }
 
 @media(max-width: 575px){
+  .modal-content{
+    width: 80%;
+  }
   .experiencia h2 {padding: 0.9em 0 0 0;  font-size: 60px;}
 
   .servicios .produccion h2 { 

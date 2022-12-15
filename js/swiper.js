@@ -5,7 +5,7 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
     loopFillGroupWithBlank: true,
     autoplay: {
-        delay: 3500,
+        delay: 4500,
         disableOnInteraction: false,
     },
     navigation: {
