@@ -755,6 +755,10 @@ footer .derechos-reservados{
     width: 90% !important;
   }
 
+  .modal .modal-body h2{font-size: 21px;}
+  .modal .modal-body p{font-size: 15px;}
+  .modal .modal-body a{font-size: 13px; letter-spacing: 3px;}
+
   .nosotros .quienes-somos .description { padding-left: 4em;}
   .nosotros .quienes-somos h2 { font-size: 90px; line-height: 75px;}
   .nosotros .quienes-somos h2 span { font-size: 22px;}
@@ -796,6 +800,10 @@ footer .derechos-reservados{
 }
 
 @media(max-width: 850px){
+  .modal-dialog{
+    top: 5%;
+  }
+
   .comunicacion-integral h2{ font-size: 55px; letter-spacing: -3px;}
   .comunicacion-integral img{width: 100%;}
 
@@ -829,6 +837,10 @@ footer .derechos-reservados{
 @media(max-width: 768px){
   .modal-content{
     width: 60%;
+  }
+
+  .modal-dialog{
+    top: 3%;
   }
 
   .modal .modal-content img{
@@ -921,9 +933,12 @@ footer .derechos-reservados{
 }
 
 @media(max-width: 575px){
-  .modal-content{
-    width: 80%;
-  }
+  .modal-content{ width: 90%; }
+  .modal-dialog{ top: 2%;}
+  .modal .modal-body h2{font-size: 19px;}
+  .modal .modal-body p{font-size: 14px;}
+  .modal .modal-body a{font-size: 12px; letter-spacing: 3px;}
+
   .experiencia h2 {padding: 0.9em 0 0 0;  font-size: 60px;}
 
   .servicios .produccion h2 { 
