@@ -11,13 +11,15 @@ $(document).ready(function () {
   });
 
   // Agregar ver más en Eventos Ambientales
-  $(".eventos-ambientales .swiper-slide img").mouseover(function(e) {
-    let id = $(this).attr("id");
-    $(".eventos-ambientales .swiper-slide #caja_" + id).removeClass("d-none");
-  }).mouseout(function() {
-    let id = $(this).attr("id");
-    $(".eventos-ambientales .swiper-slide #caja_" + id).addClass("d-none");
-  });
+  if (screen.width > 1024) {
+    $(".eventos-ambientales .swiper-slide img").mouseover(function(e) {
+      let id = $(this).attr("id");
+      $(".eventos-ambientales .swiper-slide #caja_" + id).removeClass("d-none");
+    }).mouseout(function() {
+      let id = $(this).attr("id");
+      $(".eventos-ambientales .swiper-slide #caja_" + id).addClass("d-none");
+    });
+  }
 })
 
 
