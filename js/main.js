@@ -19,7 +19,7 @@ $(document).ready(function () {
       let id = $(this).attr("id");
       $(".eventos-ambientales .swiper-slide #caja_" + id).addClass("d-none");
     });
-  }
+   }
 })
 
 
