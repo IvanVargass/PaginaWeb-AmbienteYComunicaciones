@@ -438,7 +438,8 @@ html {
   padding-bottom: 0.7em;
 }
 
-.correo-electronico button{
+.correo-electronico a{
+  text-decoration: none;
   background-color: #fff;
   border: none;
   border-radius: 20px;
@@ -447,7 +448,7 @@ html {
   color: #d3d3d3;
   font-weight: bold;
   width: 60%;
-  padding: 7px 5px;
+  padding: 7px 50px;
 }
 
 /*------------------- Quienes confian -------------------*/
@@ -607,6 +608,8 @@ footer .derechos-reservados{
   .servicios .eventos h3 {font-size: 35px;}
   .servicios .eventos h3 span{font-size: 55px;}
 
+  .nuestro-compromiso img{padding-top: 2em; width: 7.5em;}
+
   .comunicacion-integral h2 { 
     font-size: 80px;
     padding-top: 1.4em;
@@ -636,7 +639,7 @@ footer .derechos-reservados{
   .equipo img{ width: 40%;}
 
   .nuestro-compromiso .cont-compromisos {padding: 20px 0 0 40px;}
-  .nuestro-compromiso img {padding-top: 2em;}
+  .nuestro-compromiso img {padding-top: 2em; width: 7em;}
 
   .experiencia img { left: 10px;}
   .experiencia h2 {
