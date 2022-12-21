@@ -961,6 +961,11 @@ footer .derechos-reservados{
   }
   .experiencia h2, .servicios .produccion h2 { font-size: 65px;}
 
+  .correo-electronico a{
+    padding: 7px 30px;
+    font-size: 17px;
+  }
+
   footer .contacto img{width: 160px;}
 }
 
@@ -1069,6 +1074,9 @@ footer .derechos-reservados{
   .quienes-confian .swiper-slide img{width: 100%;}
 
   footer .contacto img{width: 130px;}
+}
+@media(max-width: 390px){
+  .correo-electronico a { font-size: 14px;}
 }
 
 @media(max-width: 360px){
