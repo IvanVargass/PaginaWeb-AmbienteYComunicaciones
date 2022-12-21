@@ -106,14 +106,14 @@ html {
   background-color: var(--bg-gris-claro);
   padding: 4em 0;
 }
-.nosotros h3, .nosotros .quienes-somos h2, .nosotros .quienes-somos p, .nosotros .quienes-somos button,
+.nosotros h3, .nosotros .quienes-somos h2, .nosotros .quienes-somos p, .nosotros .quienes-somos .descargar,
 .equipo h3, .equipo p, .servicios h3 {
   color: var(--color-gris-oscuro);
   font-family: Avenir;
   line-height: 120%;
 }
 .nosotros h3, .nosotros .quienes-somos p, .equipo h3, .equipo p, .servicios h3 { font-size: 15px; }
-.nosotros h3, .nosotros .quienes-somos button, .equipo h3, .servicios h3 { letter-spacing: 4px; }
+.nosotros h3, .nosotros .quienes-somos .descargar, .equipo h3, .servicios h3 { letter-spacing: 4px; }
 .nosotros .separador, .equipo .separador, .servicios .separador {
   height: 0.8px;
   background-color: var(--color-gris-oscuro);
@@ -130,12 +130,21 @@ html {
   letter-spacing: 28px;
 }
 .nosotros .quienes-somos .description{ padding-left: 15em; }
-.nosotros .quienes-somos button{
+.nosotros .quienes-somos .descargar{
   background-color: var(--color-gris-oscuro);
   color: var(--color-gris-claro);
   font-size: 13px;
   padding: 3px 12px;
   border-radius: 5px;
+  text-decoration: none;
+}
+.nosotros .quienes-somos a{
+  text-decoration: none;
+  color: var(--color-gris-oscuro);
+}
+.nosotros .quienes-somos .descargar:hover{
+  transform: scale(1.05);
+  transition: 0.2s;
 }
 
 /*------------------- Equipo -------------------*/
@@ -497,6 +506,11 @@ html {
 .swiper{
   width: 100%;
   height: 100%;
+}
+
+.quienes-confian .swiper-slide img:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .swiper-slide{
@@ -868,7 +882,7 @@ footer .derechos-reservados{
   .modal .modal-body a{font-size: 14px;}
 
   .nosotros .quienes-somos .description { padding: 0 1em 0 1em;}
-  .nosotros .quienes-somos button { font-size: 11px; }
+  .nosotros .quienes-somos .descargar { font-size: 11px; }
   .nosotros .quienes-somos h2 { 
     font-size: 80px; 
     line-height: 70px; 
