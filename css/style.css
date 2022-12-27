@@ -605,6 +605,13 @@ footer .derechos-reservados{
   padding: 0.8em 0 0.4em 0;
 }
 
+footer .derechos-reservados a{
+  font-size: 15px;
+  color: #fff;
+  font-family: Avenir;
+  text-decoration: none;
+}
+
 
 /*------------------- Media Querys -------------------*/
 @media(max-width: 1920px){
