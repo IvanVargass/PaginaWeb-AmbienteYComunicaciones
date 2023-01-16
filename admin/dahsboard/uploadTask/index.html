@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSCODE UPLOAD TASK</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    
+    <input
+      type="file"
+      class="inputFile"
+      id="fileInp"
+      onchange="getFile(event)"
+      accept="image/png, image/jpeg, video/mp4"
+    />
+    <label for="fileInp">+</label>
+    <span class="fileText"></span>
+    <button onclick="uploadImage()">UPLOAD IMAGE</button>
+    <div class="bar">
+      <div class="progress"></div>
+    </div>
+    <div class="uploadPercentage">0%</div>
+
+    <div class="imageUploaded">
+      <img alt="" class="img" />
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
