@@ -479,19 +479,8 @@
         <div class="row sin-m d-flex justify-content-center pt-5">
           <div class="col-12 col-lg-10 sin-p pt-3">
             <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="img/residuos_expo.png" alt="" id="1" data-bs-toggle="modal" data-bs-target="#modal_1">
-                    <button data-bs-toggle="modal" data-bs-target="#modal_1">Ver más</button>
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/cumbre_comunicacion.png" alt="" id="2" data-bs-toggle="modal" data-bs-target="#modal_2">
-                  <button data-bs-toggle="modal" data-bs-target="#modal_2">Ver más</button>
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/Carrera_Arboles.jpeg" alt="" id="5" data-bs-toggle="modal" data-bs-target="#modal_4">
-                  <button data-bs-toggle="modal" data-bs-target="#modal_4">Ver más</button>
-                </div>
+              <div class="swiper-wrapper" id="slider-eventos">
+
               </div>
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
@@ -501,6 +490,14 @@
         </div>
       </div>
     </div>
+
+    <!-- Ventanas Modales de Firebase -->
+    <div class="" id="ventanas-modales">
+
+    </div>
+    <!-- Ventanas Modales de Firebase -->
+
+
 
     <!-- Ventanas Modales -->
     <div class="modal fade" id="modal_1" tabindex="-1" aria-hidden="true">
@@ -827,6 +824,7 @@
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -62,7 +62,7 @@
       console.log(doc.id)
 
       $("#eventos-ambientales").append(`
-      <div class="col-10 col-sm-6 col-lg-4 col-xl-3 pb-4">
+      <div class="col-10 col-sm-6 col-lg-4 col-xl-3 pb-4 d-flex">
         <div class="card" style="width: 100%">
           <img src="${doc.data().imagen_evento}" class="card-img-top" alt="...">
           <div class="card-body">
@@ -191,8 +191,6 @@ async function uploadImage() {
         console.log("URL", url);
         if (url != "") {
           const imagen_evento = url;
-          img.setAttribute("src", url);
-          img.style.display = "block";
   
           const response = await db.collection('eventos-ambientales').doc().set({
             titulo_evento,
