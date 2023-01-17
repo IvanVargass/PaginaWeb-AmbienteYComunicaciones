@@ -33,16 +33,33 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
+  // Se listan todos los banners principales que estan cargados en la página actualmente
+  const getBannersPrincipales = () => db.collection('banners-principales').get();
+
   // Se listan todos los eventos ambientales que estan cargados en la página actualmente
   const getEventosAmbientales = () => db.collection('eventos-ambientales').get();
 
+  // Se listan todos los banners principales que estan cargados en la página actualmente
+  const getBannersInferiores = () => db.collection('banners-inferiores').get();
+
   window.addEventListener('DOMContentLoaded', async (e) => {
 
+    const banners_principales = await getBannersPrincipales();
     const eventos_ambientales = await getEventosAmbientales();
+    const banners_inferiores = await getBannersInferiores();
+
+    banners_principales.forEach( async (doc) => {
+      let commentsQuery = await db.collection('eventos-ambientales').where('titulo_evento', '==', doc.data().titulo_banner);
+      let result = await commentsQuery.get();
+
+      $("#banners-principales").append(`
+        <div class="carousel-item active">
+          <img src="${doc.data().imagen_banner}" class="d-block w-100" alt="${doc.data().titulo_banner}" data-bs-toggle="modal" data-bs-target="#${'i' + result.docs[0].id}">
+        </div>
+      `);
+    });
 
     eventos_ambientales.forEach(doc => {
-      console.log(doc.data())
-      console.log(doc.id)
 
       $("#ventanas-modales").append(`
       <div class="modal fade" id="${ 'i' + doc.id }" tabindex="-1" aria-hidden="true">
@@ -81,6 +98,16 @@
     `);
 
     });
+
+    banners_inferiores.forEach( async (doc) => {
+      $("#banner-inferior").append(`
+        <a href="${doc.data().link_banner}" target="_blank">
+          <img src="${doc.data().imagen_banner}" alt="${doc.data().titulo_banner}" class="banner-promocional">
+        </a>
+      `);
+    });
+
+
       
 });
 

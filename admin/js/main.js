@@ -7,11 +7,47 @@ signupForm.addEventListener('submit', (e) => {
     const signupEmail = document.querySelector('#email').value;
     const signupPassword = document.querySelector('#password').value;
 
+    if(signupEmail == ''){
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor ingrese un correo',
+        });
+
+        return;
+    } else if(signupPassword == ''){
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor ingrese una contraseña',
+        });
+
+        return;
+    }
+
     const auth = firebase.auth();
 
     auth.signInWithEmailAndPassword(signupEmail, signupPassword).then(userCredential => {
-        console.log('Ingreso con éxito');
+        window.location.replace("https://5500-ivanvargass-paginawebam-m6mbd4t9rbb.ws-us82.gitpod.io/admin/dahsboard/");
+    }).catch( error => {
+        if(error.code == 'auth/wrong-password'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Contraseña incorrecta',
+            });
+        } else if(error.code == 'auth/user-not-found'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Usuario no registrado',
+            });
+        } else if(error.code == 'auth/too-many-requests'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Cuenta deshabilitada debido a muchos intentos erroneos.',
+            });
+        }
     });
-    
-    console.log('enviando...');
 });

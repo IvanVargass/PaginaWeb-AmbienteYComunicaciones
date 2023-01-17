@@ -54,7 +54,7 @@
   });
 
   // Se listan todos los eventos ambientales que estan cargados en la página actualmente
-  const getEventosAmbientales = () => db.collection('eventos-ambientales').get();
+  const getBannersPrincipales = () => db.collection('banners-principales').get();
   window.addEventListener('DOMContentLoaded', async (e) => {
 
     firebase.auth().onAuthStateChanged(function(user) {
@@ -63,18 +63,16 @@
       } 
     });
 
-    const eventos_ambientales = await getEventosAmbientales();
-    eventos_ambientales.forEach( doc => {
+    const banners_principales = await getBannersPrincipales();
+    banners_principales.forEach( doc => {
 
-      $("#eventos-ambientales").append(`
+      $("#banners-principales").append(`
       <div class="col-10 col-sm-6 col-lg-4 col-xl-3 pb-4" id="${doc.id}">
         <div class="card" style="width: 100%">
-          <img src="${doc.data().imagen_evento}" class="card-img-top" alt="...">
+          <img src="${doc.data().imagen_banner}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title"><b>${doc.data().titulo_evento}</b> </h5>
-            <p class="card-text"> <b>Descripción:</b> ${doc.data().descripcion_evento}</p>
-            <p class="card-text"> <b>Link:</b> <a href="${doc.data().link_evento}" target="_blank">${doc.data().link_evento}</a></p>
-            <button class="btn btn-danger" id="${doc.id}" onClick="EliminarEvento(this.id)">Eliminar</button>
+            <h5 class="card-title"><b>${doc.data().titulo_banner}</b> </h5>
+            <button class="btn btn-danger" id="${doc.id}" onClick="EliminarBanner(this.id)">Eliminar</button>
           </div>
         </div>
       </div>
@@ -114,32 +112,14 @@ function getFile(e){
 
 async function uploadImage() {
 
-  const titulo_evento = document.querySelector('#titulo-evento').value;
-  const descripcion_evento = document.querySelector('#descripcion-evento').value;
-  const link_evento = document.querySelector('#link-evento').value;
+  const titulo_banner = document.querySelector('#titulo-banner').value;
 
-  if(titulo_evento == ''){
+  if(titulo_banner == ''){
     Swal.fire({
       icon: 'error',
       title: 'Error',
-      text: 'Complete el campo título del evento',
+      text: 'Complete el campo título del banner',
     })
-
-    return;
-  } else if(descripcion_evento == ''){
-    Swal.fire({
-      icon: 'error',
-      title: 'Error',
-      text: 'Complete el campo descripción del evento',
-    });
-
-    return;
-  } else if(link_evento == ''){
-    Swal.fire({
-      icon: 'error',
-      title: 'Error',
-      text: 'Complete el campo link del evento',
-    });
 
     return;
   } else if(fileItem == null){
@@ -153,29 +133,26 @@ async function uploadImage() {
   }
 
   // Con esta función se verifica que el evento no exista previamente
-  console.log(titulo_evento)
-  let commentsQuery = await db.collection('eventos-ambientales').where('titulo_evento', '==', titulo_evento);
+  let commentsQuery = await db.collection('banners-principales').where('titulo_banner', '==', titulo_banner);
   let result = await commentsQuery.get();
-
-  console.log(result);
-  console.log(result.docs.length)
 
   if(result.docs.length == 1){
     Swal.fire({
       icon: 'error',
       title: 'Error',
-      text: 'El evento que intenta registrar ya se encuentra agregado!',
+      text: 'El banner principal que intenta subir ya se encuentra agregado!',
     });
 
     return;
   } else {
-    let storageRef = firebase.storage().ref("eventos-ambientales/" + fileName);
+    let storageRef = firebase.storage().ref("banners-principales/" + fileName);
     let uploadTask = storageRef.put(fileItem);
   
     uploadTask.on("state_changed", (snapshot) => {
       console.log(snapshot);
       percentVal = Math.floor((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
       console.log(percentVal);
+
       uploadPercentage.innerHTML = percentVal + "%";
       progress.style.width = percentVal + "%";
     }, (error) => {
@@ -185,27 +162,23 @@ async function uploadImage() {
       uploadTask.snapshot.ref.getDownloadURL().then( async (url) => {
         console.log("URL", url);
         if (url != "") {
-          const imagen_evento = url;
+          const imagen_banner = url;
   
-          const response = await db.collection('eventos-ambientales').doc().set({
-            titulo_evento,
-            descripcion_evento,
-            link_evento,
-            imagen_evento,
+          const response = await db.collection('banners-principales').doc().set({
+            titulo_banner,
+            imagen_banner,
           });
 
-          let commentsQuery = await db.collection('eventos-ambientales').where('titulo_evento', '==', titulo_evento);
+          let commentsQuery = await db.collection('banners-principales').where('titulo_banner', '==', titulo_banner);
           let result = await commentsQuery.get();
 
-          $("#eventos-ambientales").append(`
+          $("#banners-principales").append(`
           <div class="col-10 col-sm-6 col-lg-4 col-xl-3 pb-4" id="${result.docs[0].id}">
             <div class="card" style="width: 100%">
-              <img src="${imagen_evento}" class="card-img-top" alt="...">
+              <img src="${imagen_banner}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><b>${titulo_evento}</b> </h5>
-                <p class="card-text"> <b>Descripción:</b> ${descripcion_evento}</p>
-                <p class="card-text"> <b>Link:</b> <a href="${link_evento}" target="_blank">${link_evento}</a></p>
-                <button class="btn btn-danger" id="${result.docs[0].id}" onClick="EliminarEvento(this.id)">Eliminar</button>
+                <h5 class="card-title"><b>${titulo_banner}</b> </h5>
+                <button class="btn btn-danger" id="${result.docs[0].id}" onClick="EliminarBanner(this.id)">Eliminar</button>
               </div>
             </div>
           </div>
@@ -213,25 +186,23 @@ async function uploadImage() {
 
           Swal.fire({
             icon: 'success',
-            title: 'Evento Agregado',
-            text: 'El evento se agrego con éxito.',
+            title: 'Banner principal agregado',
+            text: 'El banner principal se agrego con éxito.',
           });
-  
-          console.log(response)
         }
       })
     })
   }
 }
 
-async function EliminarEvento(id){
+async function EliminarBanner(id){
   const db = firebase.firestore();
-  const result = await db.collection('eventos-ambientales').doc(id).delete();
+  const result = await db.collection('banners-principales').doc(id).delete();
 
   Swal.fire({
     icon: 'success',
-    title: 'Evento Eliminado',
-    text: 'El evento se elimino con éxito.',
+    title: 'Banner principal eliminado',
+    text: 'El banner principal se elimino con éxito.',
   });
 
   // Se elimina el elemento HTML
