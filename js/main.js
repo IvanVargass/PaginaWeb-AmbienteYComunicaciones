@@ -1,5 +1,4 @@
-
-  // Configuración para dejar el menú fijo
+// Configuración para dejar el menú fijo
   var altura = $(".navbar").offset().top;
 
   $(window).on("scroll", function () {
@@ -22,12 +21,13 @@
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-  apiKey: "AIzaSyBKinWxC0cifRXppOz8Mchz7B0bq_0k3RU",
-  authDomain: "ambiente-y-comunicaciones.firebaseapp.com",
-  projectId: "ambiente-y-comunicaciones",
-  storageBucket: "ambiente-y-comunicaciones.appspot.com",
-  messagingSenderId: "839284570504",
-  appId: "1:839284570504:web:7b9ea4b5d910367007223d"
+    apiKey: "AIzaSyAJa-7tque1FoKvU1-D8yhWiLKD2aHeonA",
+    authDomain: "ambienteycomunicaciones-fff72.firebaseapp.com",
+    projectId: "ambienteycomunicaciones-fff72",
+    storageBucket: "ambienteycomunicaciones-fff72.appspot.com",
+    messagingSenderId: "314379260317",
+    appId: "1:314379260317:web:1cc0044642407f1b54df74",
+    measurementId: "G-MX7B93P0H2"
   };
 
   firebase.initializeApp(firebaseConfig);
@@ -106,9 +106,6 @@
         </a>
       `);
     });
-
-
-      
 });
 
 

@@ -59,7 +59,7 @@
 
     firebase.auth().onAuthStateChanged(function(user) {
       if (!user){
-        window.location.replace("https://5500-ivanvargass-paginawebam-m6mbd4t9rbb.ws-us82.gitpod.io/admin/");
+        window.location.replace("https://www.ambienteycomunicaciones.com/admin/");
       } 
     });
 
@@ -83,15 +83,15 @@
 
 })(jQuery); // End of use strict
 
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBKinWxC0cifRXppOz8Mchz7B0bq_0k3RU",
-  authDomain: "ambiente-y-comunicaciones.firebaseapp.com",
-  projectId: "ambiente-y-comunicaciones",
-  storageBucket: "ambiente-y-comunicaciones.appspot.com",
-  messagingSenderId: "839284570504",
-  appId: "1:839284570504:web:7b9ea4b5d910367007223d"
+  apiKey: "AIzaSyAJa-7tque1FoKvU1-D8yhWiLKD2aHeonA",
+  authDomain: "ambienteycomunicaciones-fff72.firebaseapp.com",
+  projectId: "ambienteycomunicaciones-fff72",
+  storageBucket: "ambienteycomunicaciones-fff72.appspot.com",
+  messagingSenderId: "314379260317",
+  appId: "1:314379260317:web:1cc0044642407f1b54df74",
+  measurementId: "G-MX7B93P0H2"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -226,7 +226,7 @@ async function EliminarBanner(id){
 $('#btn-logout').click( () => {
   firebase.auth().signOut()
   .then(function() {
-      window.location.replace("https://5500-ivanvargass-paginawebam-m6mbd4t9rbb.ws-us82.gitpod.io/admin/");
+      window.location.replace("https://www.ambienteycomunicaciones.com/admin/");
   })
   .catch(function(error) {
     // An error happened
