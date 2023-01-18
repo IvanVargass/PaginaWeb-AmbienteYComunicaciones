@@ -59,7 +59,7 @@
 
     firebase.auth().onAuthStateChanged(function(user) {
       if (!user){
-        window.location.replace("https://ivanvargass.github.io/PaginaWeb-AmbienteYComunicaciones/admin/");
+        window.location.replace("https://www.ambienteycomunicaciones.com/admin/");
       } 
     });
 
@@ -243,7 +243,7 @@ async function EliminarEvento(id){
 $('#btn-logout').click( () => {
   firebase.auth().signOut()
   .then(function() {
-      window.location.replace("https://ivanvargass.github.io/PaginaWeb-AmbienteYComunicaciones/admin/");
+      window.location.replace("https://www.ambienteycomunicaciones.com/admin/");
   })
   .catch(function(error) {
     // An error happened
