@@ -28,7 +28,7 @@ signupForm.addEventListener('submit', (e) => {
     const auth = firebase.auth();
 
     auth.signInWithEmailAndPassword(signupEmail, signupPassword).then(userCredential => {
-        window.location.replace("https://www.ambienteycomunicaciones.com/admin/dahsboard/");
+        window.location.replace("https://ivanvargass.github.io/PaginaWeb-AmbienteYComunicaciones/admin/dahsboard/");
     }).catch( error => {
         if(error.code == 'auth/wrong-password'){
             Swal.fire({
