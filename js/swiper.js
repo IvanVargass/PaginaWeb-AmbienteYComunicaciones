@@ -82,4 +82,15 @@ var swiper = new Swiper(".mySwiper-2", {
       },
   });
 
-
+  var swiper = new Swiper(".mySwiper-3", {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

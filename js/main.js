@@ -100,6 +100,15 @@
     });
 
     banners_inferiores.forEach( async (doc) => {
+
+      $('#banner-inferior').append(`
+      <div class="swiper-slide">
+        <a href="${doc.data().link_banner}" target="_blank">
+          <img src="${doc.data().imagen_banner}" alt="${doc.data().titulo_banner}" class="banner-promocional">
+        </a>
+      </div>
+    `);
+
       $("#banner-inferior").append(`
         <a href="${doc.data().link_banner}" target="_blank">
           <img src="${doc.data().imagen_banner}" alt="${doc.data().titulo_banner}" class="banner-promocional">
