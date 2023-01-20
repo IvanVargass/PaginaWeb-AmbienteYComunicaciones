@@ -86,7 +86,7 @@ var swiper = new Swiper(".mySwiper-2", {
     slidesPerView: 1,
     loop: true,
     autoplay: {
-        delay: 3500,
+        delay: 4000,
         disableOnInteraction: false,
     },
     navigation: {
