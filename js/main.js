@@ -33,18 +33,22 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
-  // Se listan todos los banners principales que estan cargados en la página actualmente
+  // Se obtienen todos los banners principales que estan cargados en la página actualmente
   const getBannersPrincipales = () => db.collection('banners-principales').get();
 
-  // Se listan todos los eventos ambientales que estan cargados en la página actualmente
+  // Se obtiene el último portafolio cargado
+  const getPortafolio = () => db.collection('portafolio').get();
+
+  // Se obtienen todos los eventos ambientales que estan cargados en la página actualmente
   const getEventosAmbientales = () => db.collection('eventos-ambientales').get();
 
-  // Se listan todos los banners principales que estan cargados en la página actualmente
+  // Se obtienen todos los banners principales que estan cargados en la página actualmente
   const getBannersInferiores = () => db.collection('banners-inferiores').get();
 
   window.addEventListener('DOMContentLoaded', async (e) => {
 
     const banners_principales = await getBannersPrincipales();
+    const portafolio = await getPortafolio();
     const eventos_ambientales = await getEventosAmbientales();
     const banners_inferiores = await getBannersInferiores();
 
@@ -57,6 +61,11 @@
           <img src="${doc.data().imagen_banner}" class="d-block w-100" alt="${doc.data().titulo_banner}" data-bs-toggle="modal" data-bs-target="#${'i' + result.docs[0].id}">
         </div>
       `);
+    });
+
+    portafolio.forEach( async (doc) => {
+      $("#portafolio-1").append(`<a class="border-0 descargar" href="${doc.data().url}" target="_blank">DESCARGAR PORTAFOLIO</a>`);
+      $("#portafolio-2").append(`<a href="${doc.data().url}" target="_blank">Aquí</a>`);
     });
 
     eventos_ambientales.forEach(doc => {
