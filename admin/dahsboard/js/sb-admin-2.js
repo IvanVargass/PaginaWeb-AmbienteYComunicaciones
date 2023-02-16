@@ -74,7 +74,7 @@
             <h5 class="card-title"><b>${doc.data().titulo_evento}</b> </h5>
             <p class="card-text"> <b>Descripción:</b> ${doc.data().descripcion_evento}</p>
             <p class="card-text"> <b>Link:</b> <a href="${doc.data().link_evento}" target="_blank">${doc.data().link_evento}</a></p>
-            <button class="btn btn-danger" id="${doc.id}" onClick="EliminarEvento(this.id)">Eliminar</button>
+            <button class="btn btn-danger" id="${doc.id}" name="${doc.data().file_name}" onClick="EliminarEvento(this.id, this.name)">Eliminar</button>
           </div>
         </div>
       </div>
@@ -186,12 +186,14 @@ async function uploadImage() {
         console.log("URL", url);
         if (url != "") {
           const imagen_evento = url;
+          const file_name = fileName;
   
           const response = await db.collection('eventos-ambientales').doc().set({
             titulo_evento,
             descripcion_evento,
             link_evento,
             imagen_evento,
+            file_name
           });
 
           let commentsQuery = await db.collection('eventos-ambientales').where('titulo_evento', '==', titulo_evento);
@@ -205,7 +207,7 @@ async function uploadImage() {
                 <h5 class="card-title"><b>${titulo_evento}</b> </h5>
                 <p class="card-text"> <b>Descripción:</b> ${descripcion_evento}</p>
                 <p class="card-text"> <b>Link:</b> <a href="${link_evento}" target="_blank">${link_evento}</a></p>
-                <button class="btn btn-danger" id="${result.docs[0].id}" onClick="EliminarEvento(this.id)">Eliminar</button>
+                <button class="btn btn-danger" id="${result.docs[0].id}" name="${file_name}" onClick="EliminarEvento(this.id, this.name)">Eliminar</button>
               </div>
             </div>
           </div>
@@ -224,9 +226,21 @@ async function uploadImage() {
   }
 }
 
-async function EliminarEvento(id){
+async function EliminarEvento(id, file_name){
+  console.log(file_name)
   const db = firebase.firestore();
   const result = await db.collection('eventos-ambientales').doc(id).delete();
+
+  // Se elimina la Imagen del Storage
+  let storageRef = firebase.storage().ref();
+  const fileRef = storageRef.child("eventos-ambientales/" + file_name);
+
+  // Eliminar archivo de Firebase Storage
+  fileRef.delete().then(() => {
+      console.log(`Archivo ${filePath} eliminado con éxito.`);
+  }).catch((error) => {
+      console.error(`Error al eliminar archivo ${filePath}:`, error);
+  });
 
   Swal.fire({
     icon: 'success',

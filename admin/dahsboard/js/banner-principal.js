@@ -72,7 +72,7 @@
           <img src="${doc.data().imagen_banner}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"><b>${doc.data().titulo_banner}</b> </h5>
-            <button class="btn btn-danger" id="${doc.id}" onClick="EliminarBanner(this.id)">Eliminar</button>
+            <button class="btn btn-danger" id="${doc.id}" name="${doc.data().file_name}" onClick="EliminarBanner(this.id, this.name)">Eliminar</button>
           </div>
         </div>
       </div>
@@ -164,10 +164,12 @@ async function uploadImage() {
         console.log("URL", url);
         if (url != "") {
           const imagen_banner = url;
+          const file_name = fileName;
   
           const response = await db.collection('banners-principales').doc().set({
             titulo_banner,
             imagen_banner,
+            file_name
           });
 
           let commentsQuery = await db.collection('banners-principales').where('titulo_banner', '==', titulo_banner);
@@ -179,7 +181,7 @@ async function uploadImage() {
               <img src="${imagen_banner}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><b>${titulo_banner}</b> </h5>
-                <button class="btn btn-danger" id="${result.docs[0].id}" onClick="EliminarBanner(this.id)">Eliminar</button>
+                <button class="btn btn-danger" id="${result.docs[0].id}" name="${file_name}" onClick="EliminarBanner(this.id, this.name)">Eliminar</button>
               </div>
             </div>
           </div>
@@ -196,9 +198,20 @@ async function uploadImage() {
   }
 }
 
-async function EliminarBanner(id){
+async function EliminarBanner(id, file_name){
   const db = firebase.firestore();
   const result = await db.collection('banners-principales').doc(id).delete();
+
+  // Se elimina la Imagen del Storage
+  let storageRef = firebase.storage().ref();
+  const fileRef = storageRef.child("banners-principales/" + file_name);
+
+  // Eliminar archivo de Firebase Storage
+  fileRef.delete().then(() => {
+      console.log(`Archivo ${filePath} eliminado con éxito.`);
+  }).catch((error) => {
+      console.error(`Error al eliminar archivo ${filePath}:`, error);
+  });
 
   Swal.fire({
     icon: 'success',
