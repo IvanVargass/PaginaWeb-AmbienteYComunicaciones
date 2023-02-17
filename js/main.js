@@ -45,12 +45,16 @@
   // Se obtienen todos los banners principales que estan cargados en la página actualmente
   const getBannersInferiores = () => db.collection('banners-inferiores').get();
 
+  // Se obtienen todos los clientes que estan cargados en la página actualmente
+  const getClientes = () => db.collection('logos-clientes').get();
+
   window.addEventListener('DOMContentLoaded', async (e) => {
 
     const banners_principales = await getBannersPrincipales();
     const portafolio = await getPortafolio();
     const eventos_ambientales = await getEventosAmbientales();
     const banners_inferiores = await getBannersInferiores();
+    const clientes = await getClientes();
 
     banners_principales.forEach( async (doc) => {
       let commentsQuery = await db.collection('eventos-ambientales').where('titulo_evento', '==', doc.data().titulo_banner);
@@ -109,7 +113,6 @@
     });
 
     banners_inferiores.forEach( async (doc) => {
-
       $('#banner-inferior').append(`
       <div class="swiper-slide">
         <a href="${doc.data().link_banner}" target="_blank">
@@ -123,6 +126,13 @@
           <img src="${doc.data().imagen_banner}" alt="${doc.data().titulo_banner}" class="banner-promocional">
         </a>
       `);
+    });
+
+    clientes.forEach( async (doc) => {
+      $("#clientes").append(`
+      <div class="swiper-slide">
+        <img src="${doc.data().logo_1}" onmouseover="this.src='${doc.data().logo_2}';" onmouseout="this.src='${doc.data().logo_1}';">
+      </div>`);
     });
 });
 
